@@ -17,6 +17,11 @@ a {
   font-size: 24px;
   margin-bottom: 36px; }
 
+.benchmark_page .benchmark_graph {
+  width: 70%;
+  height: 340px;
+  margin: 0 auto 60px auto; }
+
 .benchmarks-table {
   width: 620px;
   margin: 0 auto 14px auto; }

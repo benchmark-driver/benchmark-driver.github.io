@@ -25,31 +25,44 @@
 </div>
 </nav>
 <div class='container'>
+<div class='benchmark_page'>
 <div class='text-center'>
 <h1>MJIT Benchmarks</h1>
-<div height='400px;' id='bm_app_erb' style='width: 70%; margin: 0 auto;'></div>
+</div>
+<div data-versions='[&quot;2.0.0-p648&quot;,&quot;2.1.10&quot;,&quot;2.2.9&quot;,&quot;2.3.6&quot;,&quot;2.4.3&quot;,&quot;2.5.0&quot;]' id='graph_metadata'></div>
+<div class='benchmark_graph' data-values='[20.814,20.288,21.249,21.593,21.506,20.811]' id='aread'></div>
+<div class='benchmark_graph' data-values='[41.206,38.846,41.612,40.821,39.22,41.494]' id='aref'></div>
+<div class='benchmark_graph' data-values='[71.945,52.641,53.461,54.465,51.699,50.114]' id='aset'></div>
+<div class='benchmark_graph' data-values='[24.024,23.067,26.157,31.177,22.7,22.195]' id='awrite'></div>
+<div class='benchmark_graph' data-values='[24.512,25.395,25.481,24.013,21.751,21.69]' id='call'></div>
+<div class='benchmark_graph' data-values='[62.097,58.026,62.018,68.15,60.267,57.594]' id='const2'></div>
 </div>
 <script>
   $(function () {
-    var myChart = Highcharts.chart('bm_app_erb', {
-      chart: {
-        type: 'column'
-      },
-      title: {
-        text: 'bm_app_erb'
-      },
-      yAxis: {
+    var versions = $('#graph_metadata').data('versions');
+  
+    $('.benchmark_graph').each(function() {
+      var id = $(this).attr('id');
+      Highcharts.chart(id, {
+        chart: {
+          type: 'column'
+        },
         title: {
-          text: 'Seconds'
-        }
-      },
-      xAxis: {
-        categories: ['2.0.0', '2.1.8', '2.2.4', '2.3.0', '2.4.0', '2.5.0']
-      },
-      series: [{
-        name: 'bm_app_erb',
-        data: [1.4, 2.4, 4.4, 4.4, 8.4, 2.4]
-      }]
+          text: id
+        },
+        yAxis: {
+          title: {
+            text: 'Seconds'
+          }
+        },
+        xAxis: {
+          categories: versions
+        },
+        series: [{
+          name: id,
+          data: $(this).data('values')
+        }]
+      });
     });
   });
 </script>
