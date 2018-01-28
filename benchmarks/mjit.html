@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+<title>benchmark-driver</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/stylesheets/site.css" rel="stylesheet" />
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class='navbar'>
+<div class='container'>
+<a href="/" class="navbar-brand">benchmark-driver.github.io</a>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li>
+<a href="/benchmarks.html">Benchmarks</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class='container'>
+<div class='text-center'>
+<h1>MJIT Benchmarks</h1>
+<div height='400px;' id='bm_app_erb' style='width: 70%; margin: 0 auto;'></div>
+</div>
+<script>
+  $(function () {
+    var myChart = Highcharts.chart('bm_app_erb', {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'bm_app_erb'
+      },
+      yAxis: {
+        title: {
+          text: 'Seconds'
+        }
+      },
+      xAxis: {
+        categories: ['2.0.0', '2.1.8', '2.2.4', '2.3.0', '2.4.0', '2.5.0']
+      },
+      series: [{
+        name: 'bm_app_erb',
+        data: [1.4, 2.4, 4.4, 4.4, 8.4, 2.4]
+      }]
+    });
+  });
+</script>
+
+</div>
+<footer class='footer'>
+<div class='container text-center'>
+<p class='text-muted'>
+Developed by <a href="https://github.com/k0kubun">@k0kubun</a>.
+See the source code at <a href="#">https://github.com/benchmark-driver/benchmark-driver.github.io</a>.
+</p>
+</div>
+</footer>
+</body>
+</html>

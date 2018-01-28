@@ -1,0 +1,24 @@
+body {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif; }
+
+a {
+  color: rgba(0, 0, 0, 0.7); }
+  a:focus, a:hover {
+    color: rgba(0, 0, 0, 0.6); }
+
+.footer {
+  margin-top: 40px; }
+
+.index_page .large_title {
+  font-size: 48px;
+  margin-bottom: 24px; }
+.index_page .large_explanation {
+  font-size: 24px;
+  margin-bottom: 36px; }
+
+.benchmarks-table {
+  width: 620px;
+  margin: 0 auto 14px auto; }
+  .benchmarks-table a {
+    text-decoration: underline; }
