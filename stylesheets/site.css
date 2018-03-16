@@ -22,7 +22,11 @@ a {
   margin: 60px auto; }
 
 .benchmarks-table {
-  width: 700px;
+  width: 70%;
   margin: 0 auto 14px auto; }
   .benchmarks-table a {
     text-decoration: underline; }
+
+.margined-links a,
+.margined-links span {
+  margin-right: 10px; }
