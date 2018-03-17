@@ -13,9 +13,10 @@ a {
 .index_page .large_title {
   font-size: 48px;
   margin-bottom: 24px; }
+.index_page .description_box {
+  margin-bottom: 40px; }
 .index_page .large_explanation {
-  font-size: 24px;
-  margin-bottom: 36px; }
+  font-size: 24px; }
 
 .benchmark_page .benchmark_graph {
   height: 340px;
