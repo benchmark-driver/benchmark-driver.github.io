@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+<title>benchmark-driver</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/stylesheets/site.css" rel="stylesheet" />
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class='navbar'>
+<div class='container'>
+<a href="/" class="navbar-brand">benchmark-driver.github.io</a>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li>
+<a href="/benchmarks.html">Benchmarks</a>
+</li>
+<li>
+<a href="/hardware.html">Hardware</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class='container'>
+<div class='benchmark_page'>
+<div class='text-center'>
+<h1>Ruby Core (app): Ruby Releases</h1>
+<a href="https://github.com/benchmark-driver/ruby-benchmarks">benchmark-driver/ruby-benchmarks</a>
+<div data-type='column' data-unit='i/s' id='graph_metadata'></div>
+<ul class='nav nav-pills benchmark_navbar'>
+<li class='active'>
+<a class='activate-chart' data-id='chart-0' href='#'>app_answer</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-1' href='#'>app_aobench</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-2' href='#'>app_erb</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-3' href='#'>app_factorial</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-4' href='#'>app_fib</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-5' href='#'>app_lc_fizzbuzz</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-6' href='#'>app_mandelbrot</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-7' href='#'>app_pentomino</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-8' href='#'>app_raise</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-9' href='#'>app_strconcat</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-10' href='#'>app_tak</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-11' href='#'>app_tarai</a>
+</li>
+<li>
+<a class='activate-chart' data-id='chart-12' href='#'>app_uri</a>
+</li>
+</ul>
+<div class='benchmark_graph' data-name='app_answer' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[42.737,44.038,42.73,46.466,47.084,51.88,52.999]' id='chart-0' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_aobench' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[0.029,0.029,0.029,0.029,0.03,0.03,0.031]' id='chart-1' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_erb' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[23034.67,22278.425,22272.25,24543.634,16110.419,21896.265,21192.797]' id='chart-2' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_factorial' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[164.028,185.445,184.335,182.335,184.368,166.737,162.134]' id='chart-3' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_fib' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[2.836,2.962,2.849,3.209,3.282,3.665,3.942]' id='chart-4' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_lc_fizzbuzz' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[0.011,0.015,0.023,0.025,0.033,0.041,0.049]' id='chart-5' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_mandelbrot' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[1.395,1.255,1.437,1.2,1.215,1.19,1.187]' id='chart-6' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_pentomino' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[0.097,0.096,0.096,0.098,0.108,0.11,0.113]' id='chart-7' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_raise' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[1694432.331,1481893.002,1533742.571,2203506.252,2271697.452,2272895.033,2330840.658]' id='chart-8' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_strconcat' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[2875235.118,2550220.14,2670923.56,2995843.1,3343010.601,3554934.993,3399946.578]' id='chart-9' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_tak' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[1.86,1.996,1.931,2.247,2.165,2.575,2.433]' id='chart-10' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_tarai' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[2.441,2.584,2.397,2.633,2.686,3.094,2.998]' id='chart-11' style='width: 70%;'></div>
+<div class='benchmark_graph' data-name='app_uri' data-versions='[&quot;Ruby: 2.0.0-p648&lt;br&gt;ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]&quot;,&quot;Ruby: 2.1.10&lt;br&gt;ruby 2.1.10p492 (2016-04-01 revision 54464) [x86_64-linux]&quot;,&quot;Ruby: 2.2.9&lt;br&gt;ruby 2.2.9p480 (2017-12-15 revision 61259) [x86_64-linux]&quot;,&quot;Ruby: 2.3.6&lt;br&gt;ruby 2.3.6p384 (2017-12-14 revision 61254) [x86_64-linux]&quot;,&quot;Ruby: 2.4.3&lt;br&gt;ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]&quot;,&quot;Ruby: 2.5.0&lt;br&gt;ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]&quot;,&quot;Ruby: 2.6.0-preview1&lt;br&gt;ruby 2.6.0preview1 (2018-02-24 trunk 62554) [x86_64-linux]&quot;]' data-vm-values='[2.427,2.484,2.544,2.551,2.711,2.758,2.835]' id='chart-12' style='width: 70%;'></div>
+<script>
+  $(function() {
+    function activateChart(graphElement) {
+      var type = $('#graph_metadata').data('type');
+      var unit = $('#graph_metadata').data('unit');
+      var name = graphElement.data('name');
+      $('.benchmark_graph').hide();
+      graphElement.show();
+      Highcharts.chart(graphElement.attr('id'), {
+        chart: {
+          type: type
+        },
+        title: {
+          text: name
+        },
+        yAxis: {
+          title: {
+            text: unit
+          }
+        },
+        xAxis: {
+          categories: graphElement.data('versions'),
+          labels: {
+            formatter: function() {
+              return /Ruby: ([^<]+)/.exec(this.value)[1]
+            }
+          }
+        },
+        series: [{
+          name: name,
+          data: graphElement.data('vm-values')
+        }]
+      });
+    };
+  
+    $('.activate-chart').on('click', function(event) {
+      event.preventDefault();
+      $('.benchmark_navbar li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      var graphElement = $("#" + $(this).data('id'));
+      activateChart(graphElement);
+    });
+  
+    activateChart($('.benchmark_graph#chart-0'));
+  });
+</script>
+
+</div>
+</div>
+
+
+</div>
+<footer class='footer'>
+<div class='container text-center'>
+<p class='text-muted'>
+Developed by <a href="https://github.com/k0kubun">@k0kubun</a>.
+See the source code at <a href="#">https://github.com/benchmark-driver/benchmark-driver.github.io</a>.
+<br>
+This is built to test edge features of benchmark_driver.gem.
+You may want to see <a href="#">https://rubybench.org</a> as well.
+</p>
+</div>
+</footer>
+</body>
+</html>
