@@ -131,6 +131,18 @@
       var name = graphElement.data('name');
       $('.benchmark_graph').hide();
       graphElement.show();
+  
+      var series = [{
+        name: name,
+        data: graphElement.data('vm-values')
+      }]
+      if (graphElement.data('jit-values')) {
+        series.push({
+          name: name + " +JIT",
+          data: graphElement.data('jit-values')
+        })
+      }
+  
       Highcharts.chart(graphElement.attr('id'), {
         chart: {
           type: type
@@ -152,13 +164,7 @@
             }
           }
         },
-        series: [{
-          name: name,
-          data: graphElement.data('vm-values')
-        },{
-          name: name + " +JIT",
-          data: graphElement.data('jit-values')
-        }]
+        series: series
       });
     };
   
